@@ -12,11 +12,11 @@ import UIKit
 // class called 'ViewController', inheriting from UIViewController
 class ViewController: UIViewController
 {
-  @IBOutlet var display: UILabel!
+  @IBOutlet private var display: UILabel!
   
-  var userIsInTheMiddleOfTyping = false
+  private var userIsInTheMiddleOfTyping = false
   
-  @IBAction func touchDigit(sender: UIButton)
+  @IBAction private func touchDigit(sender: UIButton)
   {
     let digit = sender.currentTitle!
     
@@ -32,17 +32,43 @@ class ViewController: UIViewController
     userIsInTheMiddleOfTyping = true
   }
   
-  @IBAction func performOperation(sender: UIButton)
-  {
-    userIsInTheMiddleOfTyping = false
-    if let mathematicalSymbol = sender.currentTitle
+  private var displayValue: Double
     {
-      if mathematicalSymbol == "π"
-      {
-        display.text = String(M_PI)
-      }
+    get {
+      return Double(display.text!)!
+    }
+    set {
+      display.text = String(newValue)
+    }
+  }
+  
+  private var brain: CalculatorBrain = CalculatorBrain()
+  
+  @IBAction private func performOperation(sender: UIButton)
+  {
+    if userIsInTheMiddleOfTyping
+    {
+      brain.setOperand(displayValue)
+      userIsInTheMiddleOfTyping = false
     }
     
+    if let mathematicalSymbol = sender.currentTitle
+    {
+      brain.performOperation(mathematicalSymbol)
+    }
+    displayValue = brain.result
+    
+    //     // Old copy...
+    //      if mathematicalSymbol == "π"
+    //      {
+    //        display.text = String(M_PI)
+    //        displayValue = M_PI
+    //      }
+    //      else if mathematicalSymbol == "√"
+    //      {
+    //        displayValue = sqrt(displayValue)
+    //      }
   }
 }
+
 

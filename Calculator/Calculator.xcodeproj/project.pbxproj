@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A30192EE1D2BF97E00D7A997 /* CalculatorBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30192ED1D2BF97D00D7A997 /* CalculatorBrain.swift */; };
 		A3A2D0D91CCA414B00B9F83B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A2D0D81CCA414B00B9F83B /* AppDelegate.swift */; };
 		A3A2D0DB1CCA414B00B9F83B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A2D0DA1CCA414B00B9F83B /* ViewController.swift */; };
 		A3A2D0DE1CCA414B00B9F83B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3A2D0DC1CCA414B00B9F83B /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A30192ED1D2BF97D00D7A997 /* CalculatorBrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculatorBrain.swift; sourceTree = "<group>"; };
 		A3A2D0D51CCA414B00B9F83B /* Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3A2D0D81CCA414B00B9F83B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A3A2D0DA1CCA414B00B9F83B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -55,6 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				A3A2D0DA1CCA414B00B9F83B /* ViewController.swift */,
+				A30192ED1D2BF97D00D7A997 /* CalculatorBrain.swift */,
 				A3A2D0DC1CCA414B00B9F83B /* Main.storyboard */,
 				A3A2D0EA1CCA450E00B9F83B /* Supporting Files */,
 			);
@@ -143,6 +146,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A30192EE1D2BF97E00D7A997 /* CalculatorBrain.swift in Sources */,
 				A3A2D0DB1CCA414B00B9F83B /* ViewController.swift in Sources */,
 				A3A2D0D91CCA414B00B9F83B /* AppDelegate.swift in Sources */,
 			);
