@@ -89,4 +89,4 @@ Internal vs Public
 
 public - visible to everyone in all module
 
-internal - visible sacross the same module
+internal - visible across the same module
